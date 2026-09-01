@@ -90,6 +90,16 @@ void main() {
     if (choice >= 1 && choice <= 6) {
       stdout.write('\nDo you want to perform another conversion? (y/n): ');
       String again = stdin.readLineSync()!.toLowerCase();
+
+    if (again != 'y') {
+      print('\n====================================');
+      print('           Thank You!');
+      print('         Program Ended');
+      print('====================================');
+      break;
     }
+  }
+
+  print('');
   }
 }
