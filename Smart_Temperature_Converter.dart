@@ -24,5 +24,67 @@ void main() {
       break;
     }
 
+
+    double temperature;
+    double result;
+
+    switch (choice) {
+      case 1:
+        stdout.write('Enter temperature in Celsius: ');
+        temperature = double.parse(stdin.readLineSync()!);
+
+        result = (temperature * 9 / 5) + 32;
+
+        print('$temperature°C = ${result.toStringAsFixed(2)}°F');
+        break;
+
+      case 2:
+        stdout.write('Enter temperature in Fahrenheit: ');
+        temperature = double.parse(stdin.readLineSync()!);
+
+        result = (temperature - 32) * 5 / 9;
+
+        print('$temperature°F = ${result.toStringAsFixed(2)}°C');
+        break;
+
+      case 3:
+        stdout.write('Enter temperature in Celsius: ');
+        temperature = double.parse(stdin.readLineSync()!);
+
+        result = temperature + 273.15;
+
+        print('$temperature°C = ${result.toStringAsFixed(2)} K');
+        break;
+
+      case 4:
+        stdout.write('Enter temperature in Kelvin: ');
+        temperature = double.parse(stdin.readLineSync()!);
+
+        result = temperature - 273.15;
+
+        print('$temperature K = ${result.toStringAsFixed(2)}°C');
+        break;
+
+      case 5:
+        stdout.write('Enter temperature in Fahrenheit: ');
+        temperature = double.parse(stdin.readLineSync()!);
+
+        result = (temperature - 32) * 5 / 9 + 273.15;
+
+        print('$temperature°F = ${result.toStringAsFixed(2)} K');
+        break;
+
+      case 6:
+        stdout.write('Enter temperature in Kelvin: ');
+        temperature = double.parse(stdin.readLineSync()!);
+
+        result = (temperature - 273.15) * 9 / 5 + 32;
+
+        print('$temperature K = ${result.toStringAsFixed(2)}°F');
+        break;
+
+      default:
+        print('Invalid choice! Please select 1 to 7.');
+    }
   }
 }
