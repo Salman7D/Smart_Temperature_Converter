@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   while (true) {
     print('====================================');
@@ -11,5 +13,16 @@ void main() {
     print('5. Fahrenheit to Kelvin');
     print('6. Kelvin to Fahrenheit');
     print('7. Exit');
+    stdout.write('Enter your choice: ');
+    int choice = int.parse(stdin.readLineSync()!);
+
+    if (choice == 7) {
+      print('\n====================================');
+      print('           Thank You!');
+      print('         Program Ended');
+      print('====================================');
+      break;
+    }
+
   }
 }
