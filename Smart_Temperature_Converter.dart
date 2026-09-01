@@ -86,5 +86,10 @@ void main() {
       default:
         print('Invalid choice! Please select 1 to 7.');
     }
+
+    if (choice >= 1 && choice <= 6) {
+      stdout.write('\nDo you want to perform another conversion? (y/n): ');
+      String again = stdin.readLineSync()!.toLowerCase();
+    }
   }
 }
